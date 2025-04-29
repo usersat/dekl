@@ -184,7 +184,7 @@ def handle_calendar_callback(chat_id, data):
                 process_stat_period(chat_id, user_data["start"], selected_date)
         
         return None
-    except Exception as e:
+        return None  # [FIX] предотвратить повторную отправку календаря    except Exception as e:
         log(f"[CALENDAR ERROR] {e}")
         return None
 
